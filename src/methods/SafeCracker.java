@@ -19,10 +19,15 @@ public class SafeCracker {
 		 * combinations
 		 */
 		for (int i = 0; i < 9999999; i++) {
-			
+			tryCode1();
 		}
 tryCode(5);
 
+	}
+
+	private static void tryCode1() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	static void tryCode(int guess) {

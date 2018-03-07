@@ -17,25 +17,28 @@ import javax.swing.JOptionPane;
 public class NasaCountdown {
 	public static void main(String[] args) throws InterruptedException {
 		// 2. Use a pop-up to ask the user where to start counting from
-		JOptionPane.showMessageDialog(null, "Start the countdown at 10");
+		// JOptionPane.showMessageDialog(null, "10");
 		// 3. Change the countdown to use the new starting point
-		
-		// 1. Print a countdown from 10 to 0 on the console
 	
+		// 1. Print a countdown from 10 to 0 on the console
+		for (int i = 10; i > 0; i--) {
+			speak(""+i);
 			// 4. Use the speak method to hear the countdown.
-		JOptionPane.showMessageDialog(null, "10, 9, 8 ,7 , 6, 5, 4, 3, 2, 1, 0");
-			// 6. Use the following code to make the program wait one second for each number: Thread.sleep(1000);
-		
+			// JOptionPane.showMessageDialog(null, "10, 9, 8 ,7 , 6, 5, 4, 3, 2, 1, 0");
+			// 6. Use the following code to make the program wait one second for each
+			// number: Thread.sleep(1000);
+			number: Thread.sleep(750);
+		}
 		// 5. when the counting is done, speak "blastoff!"
+		// speak();
+		speak("blastoff");
 	}
 
-static void speak(String words) {
-   	 try {
-   		 Runtime.getRuntime().exec("say " + words).waitFor();
-   	 } catch (Exception e) {
-   		 e.printStackTrace();
-   	 }
-  }
+	static void speak(String words) {
+		try {
+			Runtime.getRuntime().exec("say " + words).waitFor();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
-
-

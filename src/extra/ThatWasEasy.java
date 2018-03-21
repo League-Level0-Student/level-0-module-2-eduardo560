@@ -17,7 +17,8 @@ public class ThatWasEasy extends MouseAdapter {
 
 	public void mouseClicked(MouseEvent arg0) {
 		/* Use the speak method to make the button work. */
-		
+		System.out.println("that was easy");
+		speak("THAT WAS EASY");
 	}
 
 	private void speak(String words) {
